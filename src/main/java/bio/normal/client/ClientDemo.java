@@ -1,4 +1,4 @@
-package bio.client;
+package bio.normal.client;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -11,7 +11,10 @@ import java.util.Scanner;
  * @Date: 2021/3/29
  * @Version 1.0
  */
-public class Client2Demo {
+
+
+
+public class ClientDemo {
     public static void main(String[] args) throws IOException {
         System.out.println("客户端启动...");
         // 创建一个socket通信管道，请求与服务器8888端口连接

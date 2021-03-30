@@ -1,4 +1,4 @@
-package bio.server;
+package bio.normal.server;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
