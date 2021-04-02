@@ -69,11 +69,7 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
         Client chatClient = new Client();
-        new Thread(() -> {
-            while (true) {
-                chatClient.readInfo();
-            }
-        }).start();
+        new Thread(() -> chatClient.readInfo()).start();
 
         //发送数据给服务器端
         Scanner scanner = new Scanner(System.in);
