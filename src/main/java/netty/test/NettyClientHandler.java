@@ -22,6 +22,10 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ctx.writeAndFlush(Unpooled.copiedBuffer("Hello...", CharsetUtil.UTF_8));
+        Thread.sleep(20000);
+        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello...", CharsetUtil.UTF_8));
+        Thread.sleep(20000);
+        ctx.writeAndFlush(Unpooled.copiedBuffer("Hello...", CharsetUtil.UTF_8));
     }
 
     /**

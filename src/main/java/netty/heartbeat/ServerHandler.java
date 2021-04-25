@@ -1,8 +1,10 @@
 package netty.heartbeat;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.util.CharsetUtil;
 
 /**
  * @Author: panyusheng
@@ -34,6 +36,12 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             //如果发生空闲，我们关闭通道
             // ctx.channel().close();
         }
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf buf = (ByteBuf) msg;
+        System.out.println(buf.toString(CharsetUtil.UTF_8));
     }
 }
 
